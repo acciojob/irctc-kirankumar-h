@@ -40,7 +40,7 @@ public class TrainController {
     }
 
     @GetMapping("/calculate-people-onboarding")
-    public Integer calculatePeopleOnBoarding(@RequestParam("trainId")Integer trainId,@RequestParam("station") Station station){
+    public Integer calculatePeopleOnBoarding(@RequestParam("trainId")Integer trainId,@RequestParam("station") Station station) throws Exception{
 
         try{
             Integer count = trainService.calculatePeopleBoardingAtAStation(trainId,station);
